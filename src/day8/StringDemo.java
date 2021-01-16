@@ -78,6 +78,43 @@ public class StringDemo {
 		String str = "   java Android  ";
 		System.out.println(str.trim());
 	}
+	
+	@Test
+	public void test8() {
+		String str1 = "Hello";
+		String str2 = "Java";
+		String str3 = "python";
+		String str4 = "Android";
+		
+		// String的长度是不能改变，每次变量的拼接其实是new了一个新的字符串对象   String的长度是用final定义 长度不能改变
+		String str = str1 = str2 + str3 + str4;
+		System.out.println(str);
+		// 很多字符串拼接效率很低  遇到很多字符串拼接用StringBuffer或者StringBuilder
+		StringBuffer buffer = new StringBuffer(str1);
+		buffer.append(str2);
+		buffer.append(str3);
+		buffer.append(str4);
+		System.out.println(buffer);
+
+		
+	}
+	
+	@Test
+	public void test9() {
+		String str1 = "Hello";
+		String str2 = "Java";
+		String str3 = "python";
+		String str4 = "Android";
+		
+		StringBuilder builder = new StringBuilder(str1);
+		builder.append(str2);
+		builder.append(str3);
+		builder.append(str4);
+		System.out.println(builder);
+
+		
+	}
+	
 }
 
 
